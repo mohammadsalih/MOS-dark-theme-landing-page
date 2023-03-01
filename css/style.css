@@ -1,0 +1,399 @@
+/* guide lines 
+
+--- FONT SIZE SYSTEM (rem)
+    1 / 1.2 / 1.4 / 1.6 / 1.8 / 2 / 2.4 / 3 / 3.6 / 4.4 / 5.2 / 6.2 / 7.4 / 8.6 / 9.8
+
+--- FONT WEIGHT SYSTEM 
+    400 700
+
+--- LINE HEIGHT SYSTEM 
+    1 / 1.2 / 1.4 / 1.6 
+
+--- WIGHT SPACE(PX)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+/* css reset*/
+:root {
+  --DarkBlue1: hsl(216, 53%, 9%);
+  --DarkBlue2: hsl(218, 28%, 13%);
+  --DarkBlue3: hsl(217, 28%, 15%);
+  --DarkBlue4: hsl(219, 30%, 18%);
+
+  --Cyan: hsl(176, 68%, 64%);
+  --Blue: hsl(198, 60%, 50%);
+  --Redite: hsl(0, 100%, 63%);
+
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6;
+
+  color: var(--white);
+}
+main {
+  padding-bottom: 30rem;
+
+  background-color: var(--DarkBlue2);
+}
+/* typoghrapy */
+/* heading styling */
+h1,
+h2,
+h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.6rem;
+  margin-bottom: 1.8rem;
+}
+h3 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+/* peragraph styling */
+
+.p-big {
+  font-size: 1.8rem;
+}
+.p-small {
+  font-size: 1.4rem;
+}
+
+/* containers styling */
+/* -- big container */
+.container {
+  padding: 8rem 6.4rem;
+  margin: 0 auto;
+}
+.container-big {
+  max-width: 145rem;
+}
+.container-small {
+  max-width: 100rem;
+}
+
+/* grid containers */
+.grid {
+  display: grid;
+  gap: 8rem;
+
+  justify-content: center;
+  align-items: center;
+}
+.grid-two-col {
+  grid-template-columns: 1fr 1fr;
+}
+.grid-three-col {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-container {
+  padding: 4rem;
+}
+/* btn styling */
+.btn {
+  position: relative;
+  z-index: 5;
+
+  padding: 1.2rem 3.2rem;
+
+  text-decoration: none;
+
+  border-radius: 100rem;
+  border: none;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition: background 0.2s linear;
+}
+.btn span {
+  position: relative;
+  z-index: 2;
+
+  color: var(--white);
+
+  font-size: 1.6rem;
+  text-transform: capitalize;
+}
+.main-btn-text {
+  padding: 0 4.8rem;
+}
+.btn::before {
+  content: "";
+
+  position: absolute;
+  z-index: 1;
+
+  top: 0;
+  left: -100%;
+
+  width: 300%;
+  height: 100%;
+
+  background: linear-gradient(
+    -80deg,
+    var(--Cyan) 0% 35%,
+    var(--Blue) 65% 100%
+  );
+
+  transition: all 0.3s ease;
+}
+.btn:hover::before {
+  left: 0%;
+}
+/* -- header logo */
+.header-logo {
+  width: 15rem;
+  height: auto;
+}
+/* -- navigation styling */
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  gap: 3.2rem;
+
+  list-style: none;
+}
+.nav-link {
+  color: var(--white);
+
+  opacity: 0.75;
+
+  text-decoration: none;
+  font-size: 1.6rem;
+
+  transition: all 0.3s ease;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+.nav-link:hover,
+.nav-link:active {
+  opacity: 1;
+  border-bottom: 2px solid var(--white);
+}
+/* section hero styling */
+.hero-section {
+  background: var(--DarkBlue4);
+
+  background-image: url(../images/bg-curvy-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  background-size: 100%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+
+  text-align: center;
+}
+.hero-content p {
+  max-width: 65%;
+}
+
+/* section future  styling */
+.future-section {
+  text-align: center;
+}
+.future-card img {
+  margin-bottom: 1.8rem;
+}
+
+/* section how  styling */
+.how-img {
+  width: 100%;
+}
+.link {
+  margin-top: 3.2rem;
+  padding-bottom: 0.4rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  max-width: fit-content;
+
+  text-decoration: none;
+
+  color: var(--Cyan);
+
+  border-bottom: 2px solid var(--Cyan);
+}
+.link-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/* testimonials section */
+.testimonial-container {
+  position: relative;
+  z-index: 10;
+}
+.testimonial-card {
+  padding: 2.4rem;
+  padding-top: 3.2rem;
+
+  background-color: var(--DarkBlue4);
+
+  box-shadow: 10px 10px 0px var(--DarkBlue3);
+}
+.testimonials-author {
+  margin-top: 3rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.author-img {
+  width: 4rem;
+
+  border-radius: 100%;
+}
+.author-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.author-job {
+  font-size: 1.2rem;
+
+  opacity: 0.75;
+}
+.quote {
+  position: absolute;
+  z-index: -10;
+
+  top: -10%;
+  left: -1%;
+}
+
+/* footer */
+.footer {
+  position: relative;
+
+  background-color: var(--DarkBlue1);
+}
+.form-container {
+  padding: 6.4rem 9.6rem;
+
+  position: absolute;
+
+  z-index: 100;
+
+  top: -10%;
+  left: 50%;
+
+  width: 100%;
+  max-width: 90rem;
+
+  transform: translate(-50%, -50%);
+
+  background-color: var(--DarkBlue3);
+
+  border-radius: 11px;
+
+  text-align: center;
+}
+.form {
+  margin-top: 4.8rem;
+
+  display: flex;
+  gap: 2.4rem;
+}
+.email-input {
+  padding: 1.2rem 3.2rem;
+
+  flex-grow: 1;
+
+  border-radius: 100rem;
+}
+.email-input:focus {
+  outline: none;
+}
+
+/* footer container and content */
+.footer-container {
+  padding-top: 20rem;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 4rem;
+}
+
+.footer-box:not(:first-child) {
+  padding-top: 5.5rem;
+}
+
+ul {
+  margin-top: 3.2rem;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+.li-icon {
+  margin-top: 3.5px;
+
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.social-list {
+  margin-top: 3.2rem;
+
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.6rem;
+}
+ion-icon {
+  padding: 1rem;
+  font-size: 1.8rem;
+
+  border: 2px solid var(--white);
+
+  border-radius: 100%;
+
+  transition: all 0.3s ease-in-out;
+}
+
+ion-icon:hover {
+  color: var(--Cyan);
+  border-color: var(--Cyan);
+}

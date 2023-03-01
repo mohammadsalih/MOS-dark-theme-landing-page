@@ -1,0 +1,142 @@
+/* ********************************************/
+/* below 900px */
+/* ********************************************/
+@media screen and (max-width: 65em) {
+  /* typhography */
+  h2 {
+    font-size: 3rem;
+  }
+  /* grid containers */
+  .grid {
+    gap: 6rem;
+  }
+  .grid-two-col {
+    grid-template-columns: 1fr;
+  }
+  .grid-three-col {
+    grid-template-columns: 1fr;
+  }
+
+  /* container styling */
+  .container {
+    padding: 9.6rem;
+  }
+
+  /* header */
+  .header-container {
+    padding: 4rem;
+  }
+
+  /* hero secion styling */
+  .hero-img {
+    width: 100%;
+  }
+  .hero-content p {
+    max-width: 100%;
+  }
+
+  /* future section styling */
+  .future-card {
+    margin: 0 auto;
+    max-width: 40rem;
+  }
+
+  /* how secion styling */
+  .line-brake {
+    display: none;
+  }
+  /* -- testimonial section styling */
+  .quote {
+    top: -5%;
+    left: -1%;
+  }
+
+  /* footer form */
+  .form-container {
+    padding: 3.2rem 4.8rem;
+
+    width: 80%;
+
+    top: -5%;
+  }
+
+  .footer-container {
+    padding-top: 15rem;
+
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .footer-box:not(:first-child) {
+    padding-top: 0rem;
+    margin-bottom: 6rem;
+  }
+  ul {
+    margin-top: 0rem;
+    gap: 2.4rem;
+  }
+  .first-ul {
+    margin-top: 3.2rem;
+    margin-bottom: 2.4rem;
+  }
+  .social-list {
+    margin-top: 0rem;
+
+    justify-content: center;
+  }
+}
+/* ********************************************/
+/* below 600px */
+/* ********************************************/
+@media screen and (max-width: 45.5em) {
+  html {
+    font-size: 55%;
+  }
+  /* typoghrapy */
+  /* heading styling */
+  h1 {
+    font-size: 3.2rem;
+  }
+  h2 {
+    font-size: 2.8rem;
+  }
+  /* container styling */
+  .container {
+    padding: 9.6rem 3.2rem;
+  }
+  .header-container {
+    padding: 4rem;
+  }
+  /* grid containers */
+
+  /* -- header logo */
+  .header-logo {
+    width: 12.5rem;
+    height: auto;
+  }
+
+  /* -- navigation styling */
+  .nav-list {
+    gap: 1.4rem;
+  }
+  .nav-link {
+    font-size: 1.6rem;
+  }
+
+  /* footer form */
+  .form-container {
+    padding: 3.2rem 4.8rem;
+
+    width: 90%;
+  }
+  .form {
+    margin-top: 4.8rem;
+
+    display: flex;
+    gap: 2.4rem;
+    flex-direction: column;
+  }
+
+  .footer-container {
+    padding-top: 20rem;
+  }
+}
